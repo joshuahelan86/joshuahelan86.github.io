@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#050816;color:#fff;overflow-x:hidden}
+#galaxy{position:fixed;inset:0;z-index:-2}
+.nebula{position:fixed;inset:0;z-index:-1;background:
+radial-gradient(circle at 20% 30%, rgba(138,43,226,.2), transparent 30%),
+radial-gradient(circle at 80% 20%, rgba(0,191,255,.15), transparent 30%),
+radial-gradient(circle at 60% 80%, rgba(255,20,147,.15), transparent 30%)}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;gap:30px;padding:18px;background:rgba(255,255,255,.05);backdrop-filter:blur(15px);z-index:100}
+nav a{text-decoration:none;color:white;font-weight:600}
+nav a:hover{color:#6ec6ff}
+section{min-height:100vh;padding:120px 10%;display:flex;flex-direction:column;justify-content:center}
+.hero{text-align:center}
+.hero h1{font-size:4rem}
+.hero span,.section-title{color:#6ec6ff}
+.glass{background:rgba(255,255,255,.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:30px;margin-top:20px}
+.section-title{font-size:2.5rem;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.placeholder{height:180px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#182848,#4b6cb7);font-size:1.2rem}
+.badge{height:120px;font-size:2rem}
+.fade{opacity:0;transform:translateY(40px);transition:1s}
+.fade.show{opacity:1;transform:none}
+.card-content{padding:20px}
+.scratch-btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#6ec6ff;color:#000;text-decoration:none;border-radius:999px;font-weight:bold}
+footer{text-align:center;padding:30px;color:#bbb}
+.project-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+}
+@media(max-width:768px){.hero h1{font-size:2.7rem}nav{gap:12px;flex-wrap:wrap}}
+
+.project-card{
+    position:relative;
+}
+
+.project-title-overlay{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    color:white;
+    padding:8px 14px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.2);
+    font-weight:600;
+    z-index:2;
+}
+
+</style>
+</head>
+<body>
+<canvas id="galaxy"></canvas>
+<div class="nebula"></div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#badges">Badges</a>
+<a href="#scratch">Scratch</a>
+</nav>
+
+<section id="home" class="hero fade">
+<h1>Hi, I'm <span>Joshua</span></h1>
+<p>Young Programmer • Creator • Future Software Engineer</p>
+<div class="glass">
+<h2>Joshua's Coding Universe 🚀</h2>
+<p>Welcome to my portfolio! I'm an 11-year-old programmer who loves building games, websites, and creative coding projects. I've earned 15 Codingal badges and continue learning new technologies every day.</p>
+</div>
+</section>
+
+<section id="about" class="fade">
+<h2 class="section-title">About Me</h2>
+<div class="glass">
+<p><strong>Name:</strong> Joshua</p><br>
+<p><strong>Birthdate:</strong> 19.10.2014</p><br>
+<p><strong>Age:</strong> 11</p><br>
+<p><strong>Favourite Hobby:</strong> Coding 💻</p>
+</div>
+</section>
+
+<section id="projects" class="fade">
+<h2 class="section-title">My Projects</h2>
+
+<div class="grid">
+
+<div class="card project-card">
+<div class="project-title-overlay">Background Effects</div>
+<img src="bgeffects.png" alt="Background Effects" class="project-image">
+<div class="card-content">
+<h3>Background Effects</h3>
+<p>A project exploring creative visual effects and animations.</p>
+</div>
+</div>
+
+<div class="card project-card">
+<div class="project-title-overlay">HTML Forms</div>
+<img src="htmlforms.png" alt="HTML Forms" class="project-image">
+<div class="card-content">
+<h3>HTML Forms</h3>
+<p>A project focused on creating modern and interactive web forms.</p>
+</div>
+</div>
+
+<div class="card project-card">
+<div class="project-title-overlay">Weather App CSS Design</div>
+<img src="weatherappcss.png" alt="Weather App CSS Design" class="project-image">
+<div class="card-content">
+<h3>Weather App CSS Design</h3>
+<p>A weather application interface designed using CSS.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="badges" class="fade">
+    <h2 class="section-title">Codingal Badges</h2>
+
+    <div class="glass">
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Brilliant Builder</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Code Conqueror (+2)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Coding Ninja</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Coding Wizard (+1)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Creative Coder (+2)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Creator Pro (+1)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Debugging Detective (+12)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Design Master (+15)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Enthusiastic Explorer (+2)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Innovative Coder (+3)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Logic Guru (+6)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Marvelous Coder</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Problem Solver Pro</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Project Pro (+1)</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="placeholder badge">🏆</div>
+                <div class="card-content">
+                    <h3>Syntax Specialist</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top:30px;text-align:center;">
+            <h2 style="color:#6ec6ff;">🏅 Total Badge Score: 45</h2>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="scratch" class="fade">
+<h2 class="section-title">Scratch Projects</h2>
+<div class="glass">
+<p>Check out my Scratch profile and creations!</p>
+<a class="scratch-btn" target="_blank" href="https://scratch.mit.edu/users/joshua19_2014/">Visit My Scratch Profile</a>
+<div style="margin-top:25px">
+<h3>Featured Scratch Projects</h3>
+<ul style="margin-top:10px;line-height:2">
+<li>🎮 Raise A Floppa</li>
+<li>🚀 Zombie Shooter Game</li>
+<li>🎨 Doodle Paint</li>
+<li>🧩 Learning with Frank</li>
+</ul>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Joshua • Built with HTML, CSS & JavaScript</footer>
+
+<script>
+const canvas=document.getElementById('galaxy');
+const ctx=canvas.getContext('2d');
+let w,h,stars=[],mouse={x:0,y:0};
+function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;}
+resize();addEventListener('resize',resize);
+for(let i=0;i<250;i++)stars.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2});
+addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+function anim(){
+ctx.clearRect(0,0,w,h);
+for(const s of stars){
+let dx=mouse.x-s.x,dy=mouse.y-s.y,d=Math.hypot(dx,dy);
+if(d<180){s.x-=dx*.0008;s.y-=dy*.0008}
+s.x+=s.vx;s.y+=s.vy;
+if(s.x<0)s.x=w;if(s.x>w)s.x=0;if(s.y<0)s.y=h;if(s.y>h)s.y=0;
+ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='white';ctx.fill();
+}
+requestAnimationFrame(anim);
+}
+anim();
+const observer=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')));
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
